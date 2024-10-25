@@ -1,105 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>About Us - Lifestyle Vibes</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
-    />
-  </head>
-  <body>
-    <nav class="container-fluid">
-      <ul>
-        <li><strong>Lifestyle Vibes</strong></li>
-      </ul>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#" role="button">Subscribe</a></li>
-      </ul>
-    </nav>
 
-    <main class="container">
-      <div class="grid">
-        <section>
-          <hgroup>
-            <h2>About Lifestyle Vibes</h2>
-            <h3>Our Story & Vision</h3>
-          </hgroup>
-          <p>
-            Lifestyle Vibes was created with a simple goal: to help people live
-            better, healthier, and more fulfilling lives. We believe that true
-            happiness comes from balance, mindfulness, and a deep connection to
-            the world around us.
-          </p>
-          <figure>
-            <img
-              src="https://images.unsplash.com/photo-1507919909716-c8262e491cde?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="Nature and lifestyle image from Unsplash"
-            />
-            <figcaption>
-              <a href="https://unsplash.com" target="_blank"
-                >Photo from Unsplash</a
-              >
-            </figcaption>
-          </figure>
-          <h3>Our Mission</h3>
-          <p>
-            Our mission is to inspire and empower individuals to live
-            consciously. We cover various aspects of life including wellness,
-            fitness, fashion, and mindfulness to help our audience elevate their
-            everyday experiences.
-          </p>
-          <h3>Meet the Team</h3>
-          <p>
-            Our team consists of wellness enthusiasts, fitness experts, and
-            lifestyle gurus. We're dedicated to bringing you the latest insights
-            and trends to help you live your best life.
-          </p>
-        </section>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Us - Lifestyle Vibes</title>
+  <link href="about.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand animate__animated animate__fadeIn" href="#">Lifestyle Vibes</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="animate__animated animate__fadeIn collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a id="subscribe" class="nav-link subscribe-btn" href="#" data-bs-toggle="modal"
+              data-bs-target="#subscribeModal">Subscribe</a>
+          </li>
+        </ul>
       </div>
-    </main>
+    </div>
+  </nav>
 
-    <section aria-label="Subscribe example">
-      <div class="container">
-        <article>
-          <hgroup>
-            <h2>Stay in the Loop</h2>
-            <h3>Subscribe to Our Newsletter</h3>
-          </hgroup>
-          <form class="grid">
-            <input
-              type="text"
-              id="firstname"
-              name="firstname"
-              placeholder="First Name"
-              aria-label="First Name"
-              required
-            />
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Email"
-              aria-label="Email"
-              required
-            />
-            <button type="submit" onclick="event.preventDefault()">
-              Subscribe
+  <section class="about-hero">
+    <div class="container">
+      <div class="row align-items">
+        <div id="story" class="animate__animated animate__fadeInLeft">
+          <h1 class="display-3 py-4 ">Our Story</h1>
+          <p class="lead mb-4">Founded in 2024, Lifestyle Vibes emerged from a passion for helping people live their
+            best lives through mindful choices and inspiring content.</p>
+          <div class="stats-container">
+            <div class="row g-4">
+              <div class="col-4">
+                <div class="stat-card">
+                  <h3>50K+</h3>
+                  <p>Happy Readers</p>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="stat-card">
+                  <h3>10K+</h3>
+                  <p>Articles</p>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="stat-card">
+                  <h3>100+</h3>
+                  <p>Expert Writers</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 animate__animated animate__fadeInRight">
+          <img src="https://cms.cignal.tv/Upload/Images/BBCLifestyle_Logo_Master_Charcoal_CMYK.png" alt="Our Team"
+            class="img-fluid rounded-3 shadow">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="team-section py-4">
+    <div class="container">
+      <h2 class="text-center mb-5">Meet Our Team</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="team-card">
+            <img src="https://avatars.githubusercontent.com/u/154445013?v=4" class="team-image">
+            <h4>Samuel Supardjo</h4>
+            <p class="text-muted">Founder & Creative Director</p>
+            <div class="social-links">
+              <a href=https://www.linkedin.com/in/samuelsupardjo/ class="social-link"><i
+                  class="fab fa-linkedin"></i></a>
+              <a href=https://github.com/SamuelSupardjo1 class="social-link"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="team-card">
+            <img src="https://avatars.githubusercontent.com/u/84318752?v=4" class="team-image">
+            <h4>Hengky Laurencio</h4>
+            <p class="text-muted">Content Strategist</p>
+            <div class="social-links">
+              <a href=https://www.linkedin.com/ class="social-link"><i class="fab fa-linkedin"></i></a>
+              <a href=https://github.com/ class="social-link"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="team-card">
+            <img src="https://avatars.githubusercontent.com/u/76194460?v=4" class="team-image">
+            <h4>Louis Febriano</h4>
+            <p class="text-muted">Wellness Expert</p>
+            <div class="social-links">
+              <a href=https://www.linkedin.com/feed class="social-link"><i class="fab fa-linkedin"></i></a>
+              <a href=https://github.com/ class="social-link"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="contact" class="contact-section py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-10">
+          <h2 class="text-center mb-5">Get in Touch</h2>
+          <div class="row g-4">
+            <div class="col-md-5">
+              <div class="contact-info">
+                <div class="info-card mb-4">
+                  <h4>Visit Us</h4>
+                  <p>Universitas Tarumanagara, Ruang Sekretariat, Gedung R Lt. 7</p>
+                </div>
+                <div class="info-card mb-4">
+                  <h4>Contact</h4>
+                  <p>Email: SamuelSupardjo@lifestylevibes.com<br>Phone: 081212997813</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-7">
+              <form class="contact-form">
+                <div class="mb-3">
+                  <input type="text" class="form-control" placeholder="Your Name" required>
+                </div>
+                <div class="mb-3">
+                  <input type="email" class="form-control" placeholder="Your Email" required>
+                </div>
+                <div class="mb-3">
+                  <textarea class="form-control" rows="6" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn subscribe-btn w-100">Send Message</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="modal fade" id="subscribeModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content rounded-5 shadow-lg" style="background: linear-gradient(135deg, #f0e7db, #d3c3b6)">
+        <div class="modal-header border-0">
+          <h5 class="modal-title text-dark" style="font-family: 'Georgia', serif; font-size: 1.75rem">Join Our Community
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center">
+          <p style="font-size: 1.1rem; color: #555">Subscribe to our newsletter for exclusive lifestyle tips, wellness
+            advice, and special offers!</p>
+          <form action="#" method="POST">
+            <div class="mb-3">
+              <input type="text" class="form-control" placeholder="Your Name" style="border-radius: 25px" required />
+            </div>
+            <div class="mb-3">
+              <input type="email" class="form-control" placeholder="Your Email" style="border-radius: 25px" required />
+            </div>
+            <div class="mb-3">
+              <input type="password" class="form-control" placeholder="Password" style="border-radius: 25px" required />
+            </div>
+            <div class="mb-3">
+              <input type="password" class="form-control" placeholder="Confirm Password" style="border-radius: 25px"
+                required />
+            </div>
+            <button type="submit" class="btn subscribe-btn w-100" style="border-radius: 10px;">
+              Send Message
             </button>
-          </form>
-        </article>
+        </div>
+        <div class="modal-footer justify-content-center border-0">
+          <small style="color: #777">We value your privacy. Unsubscribe anytime.</small>
+        </div>
       </div>
-    </section>
+    </div>
+  </div>
 
-    <footer class="container">
-      <small
-        ><a href="#">Privacy Policy</a> •
-        <a href="#">Terms & Conditions</a></small
-      >
-    </footer>
-  </body>
+  <footer>
+    <div class="container text-center">
+      <a href="#Policy">Privacy Policy</a>
+      <a href="#Terms">Terms & Conditions</a>
+      <p class="mt-3 mb-0"><small>© 2024 DecCorp. All rights reserved.</small></p>
+    </div>
+  </footer>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+
 </html>

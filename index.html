@@ -1,102 +1,274 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Lifestyle Theme</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
-    />
-  </head>
-  <body>
-    <nav class="container-fluid">
-      <ul>
-        <li><strong>Lifestyle Vibes</strong></li>
-      </ul>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#" role="button">Subscribe</a></li>
-      </ul>
-    </nav>
 
-    <main class="container">
-      <div class="grid">
-        <section>
-          <hgroup>
-            <h2>Welcome to the Lifestyle Hub</h2>
-            <h3>Explore trends, wellness, and living your best life</h3>
-          </hgroup>
-          <p>
-            Lifestyle is all about finding balance, embracing health, and living
-            in the moment. Whether you're into fitness, mindfulness, or just
-            looking to elevate your daily routines, you've come to the right
-            place.
-          </p>
-          <figure>
-            <img
-              src="https://images.unsplash.com/photo-1507919909716-c8262e491cde?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="Wellness lifestyle image from Unsplash"
-            />
-            <figcaption>
-              <a href="https://unsplash.com" target="_blank"
-                >Photo from Unsplash</a
-              >
-            </figcaption>
-          </figure>
-          <h3>Latest in Wellness</h3>
-          <p>
-            Discover the latest trends in wellness, from meditation techniques
-            to fitness tips that keep you grounded and healthy.
-          </p>
-          <h3>Explore Fashion & Trends</h3>
-          <p>
-            Stay ahead in fashion with insights into what's trending,
-            sustainable fashion tips, and more.
-          </p>
-        </section>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lifestyle Theme</title>
+  <link href="home.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet" />
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand animate__animated animate__fadeIn" href="#">Lifestyle Vibes</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="animate__animated animate__fadeIn collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link subscribe-btn" id="subscribe" href="#" data-bs-toggle="modal"
+              data-bs-target="#subscribeModal">Subscribe</a>
+          </li>
+        </ul>
       </div>
-    </main>
+    </div>
+  </nav>
 
-    <section aria-label="Subscribe example">
-      <div class="container">
-        <article>
-          <hgroup>
-            <h2>Join Our Community</h2>
-            <h3>Subscribe for the latest lifestyle updates</h3>
-          </hgroup>
-          <form class="grid">
-            <input
-              type="text"
-              id="firstname"
-              name="firstname"
-              placeholder="First Name"
-              aria-label="First Name"
-              required
-            />
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Email"
-              aria-label="Email"
-              required
-            />
-            <button type="submit" onclick="event.preventDefault()">
-              Subscribe
+  <section id="home" class="hero-carousel">
+    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="3000">
+          <img
+            src="https://images.unsplash.com/photo-1507919909716-c8262e491cde?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Lifestyle Image 1" />
+        </div>
+        <div class="carousel-item" data-bs-interval="3000">
+          <img src="https://nlphysio.com/media/img-4-tips-to-help-you-lead-a-more-healthy-active-lifestyle.jpg"
+            alt="Lifestyle Image 2" />
+        </div>
+        <div class="carousel-item" data-bs-interval="3000">
+          <img src="https://cdn.prod.website-files.com/62b413b337ace7603b458ab3/62b413b337ace7448b4592b8_Blog_2.png"
+            alt="Lifestyle Image 3" />
+        </div>
+      </div>
+    </div>
+    <div class="hero-content">
+      <h1 class="animate__animated animate__fadeIn">
+        Welcome to Lifestyle Vibes
+      </h1>
+      <p class="lead animate__animated animate__fadeIn animate__delay-1s">
+        Explore trends, wellness, and living your best life
+      </p>
+      <button class="btn btn-lg btn-light animate__animated animate__fadeIn animate__delay-2s" data-bs-toggle="modal"
+        data-bs-target="#subscribeModal">
+        Join Our Community
+      </button>
+    </div>
+  </section>
+
+  <section class="features-section py-4">
+    <div class="container">
+      <h2 class="text-center mb-5">What We Offer</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="feature-card">
+            <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?q=80&w=1470&auto=format&fit=crop"
+              alt="Wellness & Health" class="feature-image" />
+            <h3>Wellness & Health</h3>
+            <p>
+              Expert advice on mental health, nutrition, and holistic wellness
+              practices to help you live your best life.
+            </p>
+            <i class="fas fa-heart mb-3"></i>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature-card">
+            <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?q=80&w=1471&auto=format&fit=crop"
+              alt="Style & Fashion" class="feature-image" />
+            <h3>Style & Fashion</h3>
+            <p>
+              Stay trendy with our curated fashion tips, sustainable style
+              guides, and seasonal trend forecasts.
+            </p>
+            <i class="fas fa-tshirt mb-3"></i>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature-card">
+            <img src="https://images.unsplash.com/photo-1616137422495-1e9e46e2aa77?q=80&w=1932&auto=format&fit=crop"
+              alt="Home & Living" class="feature-image" />
+            <h3>Home & Living</h3>
+            <p>
+              Transform your space with interior design inspiration,
+              organization tips, and lifestyle hacks.
+            </p>
+            <i class="fas fa-home mb-3"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-section py-5 bg-light">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <img src="https://images.unsplash.com/photo-1511988617509-a57c8a288659" alt="About Us"
+            class="img-fluid rounded shadow" />
+        </div>
+        <div class="col-md-6">
+          <h2>Why Choose Lifestyle Vibes?</h2>
+          <p class="lead">
+            We're your go-to destination for everything lifestyle, helping you
+            create a life you love.
+          </p>
+          <ul class="feature-list">
+            <li>Expert-curated content</li>
+            <li>Sustainable living tips</li>
+            <li>Fitness and wellness guidance</li>
+            <li>Home styling inspiration</li>
+          </ul>
+          <a href="about.html" class="btn subscribe-btn mt-3" style="max-width: 193px">Learn More About Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials-section py-5">
+    <div class="container">
+      <h2 class="text-center mb-5">What Our Community Says</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="testimonial-card">
+            <img src="https://avatars.githubusercontent.com/u/132914576?v=4" class="testimonial-image rounded-circle" />
+            <div class="rating mb-2">⭐⭐⭐⭐⭐</div>
+            <p>
+              "Lifestyle Vibes has completely transformed my approach to
+              wellness and self-care!"
+            </p>
+            <div class="author">- Bovilius Meidi</div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="testimonial-card">
+            <img src="https://avatars.githubusercontent.com/u/162522243?v=4" class="testimonial-image rounded-circle" />
+            <div class="rating mb-2">⭐⭐⭐⭐⭐</div>
+            <p>
+              "The fashion tips are amazing and have helped me develop my
+              personal style."
+            </p>
+            <div class="author">- Hans Thobie Sachio</div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="testimonial-card">
+            <img src="https://avatars.githubusercontent.com/u/110604426?v=4" class="testimonial-image rounded-circle" />
+            <div class="rating mb-2">⭐⭐⭐⭐⭐</div>
+            <p>
+              "Great community and incredible lifestyle improvement content!"
+            </p>
+            <div class="author">- Justine Declan</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact-section py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-10">
+          <h2 class="text-center mb-5">Get in Touch</h2>
+          <div class="row g-4">
+            <div class="col-md-5">
+              <div class="contact-info">
+                <div class="info-card mb-4">
+                  <h4>Visit Us</h4>
+                  <p>
+                    Universitas Tarumanagara, Ruang Sekretariat, Gedung R Lt.
+                    7
+                  </p>
+                </div>
+                <div class="info-card mb-4">
+                  <h4>Contact</h4>
+                  <p>
+                    Email: SamuelSupardjo@lifestylevibes.com<br />Phone:
+                    081212997813
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-7">
+              <form class="contact-form">
+                <div class="mb-3">
+                  <input type="text" class="form-control" placeholder="Your Name" required />
+                </div>
+                <div class="mb-3">
+                  <input type="email" class="form-control" placeholder="Your Email" required />
+                </div>
+                <div class="mb-3">
+                  <textarea class="form-control" rows="6" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn subscribe-btn w-100">
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="modal fade" id="subscribeModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content rounded-5 shadow-lg" style="background: linear-gradient(135deg, #f0e7db, #d3c3b6)">
+        <div class="modal-header border-0">
+          <h5 class="modal-title text-dark" style="font-family: 'Georgia', serif; font-size: 1.75rem">Join Our Community
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center">
+          <p style="font-size: 1.1rem; color: #555">Subscribe to our newsletter for exclusive lifestyle tips, wellness
+            advice, and special offers!</p>
+          <form action="#" method="POST">
+            <div class="mb-3">
+              <input type="text" class="form-control" placeholder="Your Name" style="border-radius: 25px" required />
+            </div>
+            <div class="mb-3">
+              <input type="email" class="form-control" placeholder="Your Email" style="border-radius: 25px" required />
+            </div>
+            <div class="mb-3">
+              <input type="password" class="form-control" placeholder="Password" style="border-radius: 25px" required />
+            </div>
+            <div class="mb-3">
+              <input type="password" class="form-control" placeholder="Confirm Password" style="border-radius: 25px"
+                required />
+            </div>
+            <button type="submit" class="btn subscribe-btn w-100" style="border-radius: 10px;">
+              Send Message
             </button>
-          </form>
-        </article>
+        </div>
+        <div class="modal-footer justify-content-center border-0">
+          <small style="color: #777">We value your privacy. Unsubscribe anytime.</small>
+        </div>
       </div>
-    </section>
+    </div>
+  </div>
 
-    <footer class="container">
-      <small
-        ><a href="#">Privacy Policy</a> •
-        <a href="#">Terms & Conditions</a></small
-      >
-    </footer>
-  </body>
-</html> 
+  <footer>
+    <div class="container text-center">
+      <a href="#Privacy">Privacy Policy</a>
+      <a href="#Terms">Terms & Conditions</a>
+      <p class="mt-3 mb-0">
+        <small>© 2024 DecCorp. All rights reserved.</small>
+      </p>
+    </div>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
